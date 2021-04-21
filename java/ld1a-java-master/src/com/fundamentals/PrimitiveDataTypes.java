@@ -11,6 +11,14 @@ public class PrimitiveDataTypes {
 	boolean booleanvar;
 
 	public static void main(String[] args) {
+//		byte bvar;
+//		short shortvar;
+//		int intvar;
+//		long longvar;
+//		float floatvar;
+//		double doublevar;
+//		char charvar;
+//		boolean booleanvar;
 //		create a reference
 		PrimitiveDataTypes primitiveDataTypes;
 //		create the memory
