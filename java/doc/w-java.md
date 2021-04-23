@@ -1,30 +1,32 @@
-:book: **Steps**  
+:book: **Steps**
 
-:spiral_notepad: **Migrating a project**  
+:spiral_notepad: **Migrating a project**
+
 1. Manually migrated a traditional project (copy src folder)
 2. Maven (easily create different types of projects (copy))
 
+:spiral_notepad: **layered arch +interface driven development**
 
-:spiral_notepad: **layered arch +interface driven development**  
+:book: **Revision History**
 
-
-:book: **Revision History**  
 - Git & Git Hub
 
-:spiral_notepad: **Moving to Interface Driven Development**  
+:spiral_notepad: **Moving to Interface Driven Development**
 
-:eye: *Challenges with our existing code....*  
+:eye: _Challenges with our existing code...._
 
-:book: **Classes, Interfaces and abstract classes**  
+:book: **Classes, Interfaces and abstract classes**
+
 - classes are concrete (fully defined)
 - abstract class (partially implemented)
 - interface (only abstract methods
   )
 
-:memo: *Instant Practice*
-- create NetBanking which can do payments using the Payment interface and perform fund transfers using FundTransfer interface.
-- The statement should be dislayed by the NetBanking class.   
+:memo: _Instant Practice_
+
+- create NetBanking class which can do payments using the Payment interface and perform fund transfers using FundTransfer interface.
+- The statement should be dislayed by the NetBanking class.
 - PaymentApp : Use the Netbanking class to perform only payments.
 - FundTransfer : Use the Netbanking class to perform only fund transfer.
 - NetBankingapp : Use the Netbanking class to perform all operations
-Note : When you access the other methods, it should be a compilation error.
+  Note : When you access the other methods, it should be a compilation error.
