@@ -68,4 +68,29 @@ public class ProductRepository {
 		products.add(new Product(3, "The Power of Now", 50.0f));
 		return products;
 	}
+
+	public ArrayList getProductsFromDB() {
+//		try {
+//			Connection connection = MySQLConnectionUtil.getConnection();
+//			// statement for executing a query
+//			Statement statement = connection.createStatement();
+//			// get the results
+//			ResultSet resultSet = statement.executeQuery("SELECT * FROM PRODUCTS");
+//			while (resultSet.next()) {
+//				System.out.print(resultSet.getInt(1) + "\t");
+//				System.out.print(resultSet.getString(2) + "\t");
+//				System.out.println(resultSet.getFloat("price"));
+//
+//			}
+//		} catch (SQLException exception) {
+//			System.out.println(exception);
+//		}
+
+		ArrayList products = new ArrayList();
+		Product product = new Product(1, "The Values Factor", 50.0f);
+		products.add(product);
+		products.add(new Product(2, "Elon Musk", 50.0f));
+		products.add(new Product(3, "The Power of Now", 50.0f));
+		return products;
+	}
 }
