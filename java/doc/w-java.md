@@ -14,3 +14,13 @@
 :spiral_notepad: **Moving to Interface Driven Development**  
 
 :eye: *Challenges with our existing code....*  
+
+:book: **Classes, Interfaces and abstract classes**  
+- classes are concrete (fully defined)
+- abstract class (partially implemented)
+- interface (only abstract methods
+  )
+
+:memo: *Instant Practice*
+- create NetBanking which can do payments using the Payment interface and perform fund transfers using FundTransfer interface.
+- The statement should be dislayed by the NetBanking class.   
