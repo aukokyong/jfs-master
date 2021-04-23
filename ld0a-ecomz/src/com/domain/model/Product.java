@@ -8,10 +8,23 @@ public class Product extends Object{
 	private String productName;
 	private float price;
 
+//	constructor 
+//	public Product(int productId, String productName,  float price)
+//	{
+//		this.productId = productId;
+//		this.productName = productName;
+//		this.price = price;
+//	}
 // accessor or getter
 	public int getProductId() {
 		return productId;
 	}
+
+	public Product(int productId, String productName, float price) {
+	this.productId = productId;
+	this.productName = productName;
+	this.price = price;
+}
 
 	// mutator setter
 	public void setProductId(int productId) {

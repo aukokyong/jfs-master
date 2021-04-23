@@ -24,12 +24,14 @@ public class ProductRepository {
 
 	public Product getProductObject() {
 
-		Product meaningProduct = null;
+//		Product meaningProduct = null;
 //		Product meaningProduct = new Product();
+		Product meaningProduct = new Product(1,"Man's search for Meaning",50.5f);
 		try {
-			meaningProduct.setProductId(1);
-			meaningProduct.setProductName("Man's search for Meaning");
-			meaningProduct.setPrice(50.50f);
+			
+//			meaningProduct.setProductId(1);
+//			meaningProduct.setProductName("Man's search for Meaning");
+//			meaningProduct.setPrice(50.50f);
 		} catch (NullPointerException nullPointerException) {
 			System.out.println("Secret Log : " + nullPointerException);
 			System.out.println("Hi <<Person>>, please try after some time!");
