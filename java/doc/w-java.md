@@ -27,6 +27,6 @@
 - create NetBanking class which can do payments using the Payment interface and perform fund transfers using FundTransfer interface.
 - The statement should be dislayed by the NetBanking class.
 - PaymentApp : Use the Netbanking class to perform only payments.
-- FundTransfer : Use the Netbanking class to perform only fund transfer.
-- NetBankingapp : Use the Netbanking class to perform all operations
+- FundTransferApp : Use the Netbanking class to perform only fund transfer.
+- NetBankingApp : Use the Netbanking class to perform all operations
   Note : When you access the other methods, it should be a compilation error.
