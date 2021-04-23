@@ -53,8 +53,7 @@ public class Product extends Object{
 		String productString;
 		productString = "Product Id : \t" + getProductId();
 		productString += "\nProduct Name \t: " + getProductName();
-		productString += "\nProduct Price \t: " + getPrice();
+		productString += "\nProduct Price \t: " + getPrice() + "\n";
 		return productString;
 	}
-
 }

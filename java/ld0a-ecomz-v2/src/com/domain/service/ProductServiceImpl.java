@@ -1,5 +1,7 @@
 package com.domain.service;
 
+import java.util.ArrayList;
+
 import com.domain.model.Product;
 import com.domain.repository.ProductRepository;
 
@@ -20,6 +22,11 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Product getProductObject() {
 		return productRepository.getProductObject();
+	}
+
+	@Override
+	public ArrayList getProducts() {
+return productRepository.getProducts();
 	}
 	
 	

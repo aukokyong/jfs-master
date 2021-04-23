@@ -1,5 +1,7 @@
 package com.domain.repository;
 
+import java.util.ArrayList;
+
 import com.domain.exception.ProductNotAvailableException;
 import com.domain.model.Product;
 
@@ -22,6 +24,7 @@ public class ProductRepository {
 		// business functionality
 		return "cnv message";
 	}
+
 	public String getProductNameFromRepository() {
 		return productName;
 	}
@@ -30,9 +33,9 @@ public class ProductRepository {
 
 //		Product meaningProduct = null;
 //		Product meaningProduct = new Product();
-		Product meaningProduct = new Product(1,"Man's search for Meaning",50.5f);
+		Product meaningProduct = new Product(1, "Man's search for Meaning", 50.5f);
 		try {
-			
+
 //			meaningProduct.setProductId(1);
 //			meaningProduct.setProductName("Man's search for Meaning");
 //			meaningProduct.setPrice(50.50f);
@@ -48,12 +51,21 @@ public class ProductRepository {
 			if (meaningProduct == null) {
 				ProductNotAvailableException productNotAvailableException = new ProductNotAvailableException();
 				throw productNotAvailableException;
-			}	
-		} 
+			}
+		}
 
 		catch (ProductNotAvailableException productNotAvailableException) {
 			System.out.println("Sorry, the product you are looking for is not avaibable..");
 		}
 		return null;
+	}
+
+	public ArrayList getProducts() {
+		ArrayList products = new ArrayList();
+		Product product = new Product(1, "The Values Factor", 50.0f);
+		products.add(product);
+		products.add(new Product(2, "Elon Musk", 50.0f));
+		products.add(new Product(3, "The Power of Now", 50.0f));
+		return products;
 	}
 }
