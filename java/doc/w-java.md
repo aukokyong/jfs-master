@@ -29,5 +29,8 @@
 - PaymentApp : Use the Netbanking class to perform only payments.
 - FundTransferApp : Use the Netbanking class to perform only fund transfer.
 - NetBankingApp : Use the Netbanking class to perform all operations
-  
+
   Note : When you access the other methods, it should be a compilation error.
+
+:memo: _Instant Practice_  
+Migrate a rigid application to a loosely-coupled system.
