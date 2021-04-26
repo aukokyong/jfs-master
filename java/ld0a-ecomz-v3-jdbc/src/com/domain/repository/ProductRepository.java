@@ -87,10 +87,28 @@ public class ProductRepository {
 //		}
 
 		ArrayList products = new ArrayList();
-		Product product = new Product(1, "The Values Factor", 50.0f);
-		products.add(product);
-		products.add(new Product(2, "Elon Musk", 50.0f));
-		products.add(new Product(3, "The Power of Now", 50.0f));
+		//IP : THE VALUES FROM DB
+//		Product product = new Product(1, "The Values Factor", 50.0f);
+//		products.add(product);
+//		products.add(new Product(2, "Elon Musk", 50.0f));
+//		products.add(new Product(3, "The Power of Now", 50.0f));
 		return products;
+	}
+	
+	public int insertProduct(Product product) {
+		// code here
+		int noOfRowsInserted = 0;
+		return noOfRowsInserted;
+	}
+	
+	public int udpateProduct(Product product) {
+		// code here
+		int noOfRowsUpdated = 0;
+		return noOfRowsUpdated;
+	}
+	public int deleteProduct(int productId) {
+		// code here
+		int noOfRowsDeleted = 0;
+		return noOfRowsDeleted;
 	}
 }
