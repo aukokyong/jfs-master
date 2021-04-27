@@ -32,7 +32,8 @@ return productRepository.getProducts();
 
 	@Override
 	public int insertProduct(Product product) {
-		int rowsInserted = productRepository.insertProduct(product);
+//		int rowsInserted = productRepository.insertProduct(product);
+		int rowsInserted = productRepository.insertProductPreparedStatement(product);
 		return rowsInserted;
 	}
 	

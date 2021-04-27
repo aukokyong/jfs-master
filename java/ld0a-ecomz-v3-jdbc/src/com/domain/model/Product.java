@@ -55,9 +55,9 @@ public class Product extends Object{
 	@Override
 	public String toString() {
 		String productString;
-		productString = "Product Id : \t" + getProductId();
-		productString += "\nProduct Name \t: " + getProductName();
-		productString += "\nProduct Price \t: " + getPrice() + "\n";
+		productString = "\nProduct Id : " + getProductId();
+		productString += "\tProduct Name : " + getProductName();
+		productString += "\tProduct Price : " + getPrice() + "\n";
 		return productString;
 	}
 }

@@ -1,6 +1,7 @@
 package com.domain.repository;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -113,7 +114,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 				product.setProductId(resultSet.getInt(1));
 				product.setProductName(resultSet.getString(2));
 				product.setPrice(resultSet.getFloat(3));
-				System.out.println(product);
+//				System.out.println(product);
 				products.add(product);
 			}
 		} catch (SQLException exception) {
@@ -145,6 +146,28 @@ public class ProductRepositoryImpl implements ProductRepository {
 			System.out.println(exception);
 		}
 		return noOfRowsInserted;
+	}
+//	IP Refactor to reduce boiler-plate code.
+	public int insertProductPreparedStatement(Product product) {
+		// code here
+		int rowInserted = 0;
+		try {
+			Connection connection = MySQLConnectionUtil.getConnection();
+			// prepared statement for executing a query
+			PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO PRODUCTS VALUES(?,?,?)");
+//			Perform insert DML
+			preparedStatement.setInt(1, 6);
+			preparedStatement.setString(2, "12 RULES FOR LIFE");
+			preparedStatement.setFloat(3, 50);
+			
+			rowInserted = preparedStatement.executeUpdate();
+			System.out.println("Inserted : " + rowInserted);
+			return rowInserted;
+		}
+		catch (SQLException exception) {
+			System.out.println(exception);
+		}
+		return rowInserted;
 	}
 
 	public int udpateProduct(Product product) {
