@@ -35,13 +35,15 @@
 :memo: _Instant Practice_  
 Migrate a rigid application to a loosely-coupled system.
 
-:memo: _Lab_  
+:memo: _Lab_
+
 - perform update & delete using Statement interface.
 - perform update & delete using Prepared Statement.
 
 :lock: POwn wants to save products to a file and perform CRUD.
- 
-:memo: _Lab_  ArrayList + File IO
+
+:memo: _Lab_ ArrayList + File IO
+
 - Display the arraylist from the File
 - update any one product and delete another product.
-- display to verify 
+- save to file and display to verify
