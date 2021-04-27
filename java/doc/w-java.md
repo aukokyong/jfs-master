@@ -41,3 +41,7 @@ Migrate a rigid application to a loosely-coupled system.
 
 :lock: POwn wants to save products to a file and perform CRUD.
  
+:memo: _Lab_  ArrayList + File IO
+- Display the arraylist from the File
+- update any one product and delete another product.
+- display to verify 
