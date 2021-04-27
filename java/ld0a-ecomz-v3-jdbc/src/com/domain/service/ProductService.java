@@ -7,4 +7,5 @@ import com.domain.model.Product;
 public interface ProductService {
 	public Product getProductObject();
 	public ArrayList getProducts();
+	public int insertProduct(Product product);
 }

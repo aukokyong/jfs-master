@@ -7,6 +7,34 @@ import com.domain.service.ProductService;
 import com.domain.service.ProductServiceImpl;
 
 public class CRUDApp {
+	public static void main(String[] args) {
+		System.out.println("Build a CRUD.....");
+		getProducts();
+		insertProduct();
+		getProducts();
+//		getProductObject();
+//		getProducts();
+	}
+	private static void insertProduct() {
+		// creating the product service reference
+		ProductService productService = null;
+		productService = new ProductServiceImpl();		
+		//IP create a new product and insert
+		int inserted = productService.insertProduct(null);
+		System.out.println("Inserted : " + inserted);
+	}
+	private static void getProducts() {
+		// creating the product service reference
+		ProductService productService = null;
+		//instantiate the product service
+		productService = new ProductServiceImpl();			
+		ArrayList products  = productService.getProducts();
+//		productService.getProductNameFromService();
+//		System.out.println("Product Id : " + product.getProductId());
+//		System.out.println("Product Name : " + product.getProductName());
+//		System.out.println("Product Price : " + product.getPrice());
+		System.out.println(products);
+	}
 	private static void getProductObject() {
 		// creating the product service reference
 		ProductService productService = null;
@@ -25,19 +53,6 @@ public class CRUDApp {
 		System.out.println(product);
 	}
 
-	private static void getProducts() {
-			// creating the product service reference
-			ProductService productService = null;
-			//instantiate the product service
-			productService = new ProductServiceImpl();			
-			ArrayList products  = productService.getProducts();
-	//		productService.getProductNameFromService();
-	//		System.out.println("Product Id : " + product.getProductId());
-	//		System.out.println("Product Name : " + product.getProductName());
-	//		System.out.println("Product Price : " + product.getPrice());
-			System.out.println(products);
-		}
-	
 	private static void getProductsFromDB() {
 		// creating the product service reference
 		ProductService productService = null;
@@ -45,9 +60,5 @@ public class CRUDApp {
 		productService = new ProductServiceImpl();			
 	}
 
-	public static void main(String[] args) {
-		System.out.println("Build a CRUD.....");
-//		getProductObject();
-//		getProducts();
-	}
+
 }

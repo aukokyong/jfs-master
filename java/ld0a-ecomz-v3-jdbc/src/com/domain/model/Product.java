@@ -19,7 +19,11 @@ public class Product extends Object{
 	public int getProductId() {
 		return productId;
 	}
-
+	
+	public Product() {
+		// to be used later....
+	}
+	
 	public Product(int productId, String productName, float price) {
 	this.productId = productId;
 	this.productName = productName;
