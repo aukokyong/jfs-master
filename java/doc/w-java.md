@@ -37,4 +37,4 @@ Migrate a rigid application to a loosely-coupled system.
 
 :memo: _Lab_  
 - perform update & delete using Statement interface.
-- 
+- perform update & delete using Prepared Statement.
