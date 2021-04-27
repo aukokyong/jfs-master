@@ -3,15 +3,18 @@ package com.domain.ui;
 import java.util.ArrayList;
 
 import com.domain.model.Product;
+import com.domain.repository.ProductFileRepository;
+import com.domain.repository.ProductFileRepositoryImpl;
 import com.domain.service.ProductService;
 import com.domain.service.ProductServiceImpl;
 
 public class CRUDApp {
 	public static void main(String[] args) {
 		System.out.println("Build a CRUD.....");
-		getProducts();
-		insertProduct();
-		getProducts();
+//		getProducts();
+//		insertProduct();
+//		getProducts();
+		insertProductToFile();
 //		getProductObject();
 //		getProducts();
 	}
@@ -22,6 +25,11 @@ public class CRUDApp {
 		//IP create a new product and insert
 		int inserted = productService.insertProduct(null);
 		System.out.println("Inserted : " + inserted);
+	}
+	private static void insertProductToFile() {
+		ProductFileRepository productFileRepository = new ProductFileRepositoryImpl();
+		int saved = productFileRepository.insertProduct(new Product(1, "Rich Dad Poor Dad", 56));
+		System.out.println("Saved : " + saved);
 	}
 	private static void getProducts() {
 		// creating the product service reference

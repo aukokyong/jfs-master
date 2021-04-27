@@ -1,7 +1,9 @@
 package com.domain.model;
 
+import java.io.Serializable;
+
 // public class Product {
-public class Product extends Object{
+public class Product extends Object implements Serializable{
 //	not accssible outside the class
 //  instance variable
 	private int productId;

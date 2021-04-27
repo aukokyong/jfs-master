@@ -38,3 +38,6 @@ Migrate a rigid application to a loosely-coupled system.
 :memo: _Lab_  
 - perform update & delete using Statement interface.
 - perform update & delete using Prepared Statement.
+
+:lock: POwn wants to save products to a file and perform CRUD.
+ 
