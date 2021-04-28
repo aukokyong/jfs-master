@@ -86,6 +86,7 @@ public class CRUDApp {
 	}
 
 	private static void insertProductToFile() {
+	
 		ProductFileRepository productFileRepository = new ProductFileRepositoryImpl();
 		int saved = productFileRepository.insertProduct(new Product(1, "Rich Dad Poor Dad", 56));
 		System.out.println("Saved : " + saved);

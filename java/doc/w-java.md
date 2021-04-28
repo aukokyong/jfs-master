@@ -47,3 +47,6 @@ Migrate a rigid application to a loosely-coupled system.
 - Display the arraylist from the File
 - update any one product and delete another product.
 - save to file and display to verify
+
+:memo: _Lab_ ArrayList + Collection
+As an extension to the above lab, remove a product using the collection interface.
