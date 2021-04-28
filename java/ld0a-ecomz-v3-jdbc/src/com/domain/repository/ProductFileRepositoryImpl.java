@@ -13,22 +13,27 @@ import com.domain.model.Product;
 
 public class ProductFileRepositoryImpl implements ProductFileRepository {
 
-	public int insertProduct(Product product) {
+	public int deleteProduct(int productId) {
 		// code here
-		int objectSaved = 0;
-		File productFile = new File("product.dat");
+		int noOfRowsDeleted = 0;
+		return noOfRowsDeleted;
+	}
+	
+	@Override
+	public ArrayList getArrayListFromFile() {
+		// code here
+		ArrayList productsList = new ArrayList();
+		File productFile = new File("productsList.dat");
 		try {
-			FileOutputStream fileOutputStream =  new FileOutputStream(productFile);
-			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-			objectOutputStream.writeObject(product);
-			objectSaved = 1;
-			System.out.println("Saved : " + objectSaved);
-			return objectSaved;
+			FileInputStream fileInputStream = new FileInputStream(productFile);
+			ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+			Object object = objectInputStream.readObject();
+			productsList = (ArrayList)object;
+			return productsList;
 		}
-		catch (IOException exception) {
+		catch (IOException | ClassNotFoundException exception) {
 			System.out.println(exception);
-			objectSaved = 0;
-			return objectSaved;
+			return productsList;
 		}
 	}
 	
@@ -51,18 +56,6 @@ public class ProductFileRepositoryImpl implements ProductFileRepository {
 //		Unreachable code
 //		return product;
 	}
-	
-	public int udpateProduct(Product product) {
-		// code here
-		int noOfRowsUpdated = 0;
-		return noOfRowsUpdated;
-	}
-
-	public int deleteProduct(int productId) {
-		// code here
-		int noOfRowsDeleted = 0;
-		return noOfRowsDeleted;
-	}
 
 	@Override
 	public ArrayList getProducts() {
@@ -78,7 +71,9 @@ public class ProductFileRepositoryImpl implements ProductFileRepository {
 				try {
 					FileOutputStream fileOutputStream =  new FileOutputStream(productFile);
 					ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-					objectOutputStream.writeObject(products);
+					Object object = products;
+					objectOutputStream.writeObject(object);
+//					objectOutputStream.writeObject(products);
 					objectSaved = products.size();
 					System.out.println("Saved : " + objectSaved);
 					return objectSaved;
@@ -88,5 +83,30 @@ public class ProductFileRepositoryImpl implements ProductFileRepository {
 					objectSaved = 0;
 					return objectSaved;
 				}
+	}
+
+	public int insertProduct(Product product) {
+		// code here
+		int objectSaved = 0;
+		File productFile = new File("product.dat");
+		try {
+			FileOutputStream fileOutputStream =  new FileOutputStream(productFile);
+			ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			objectOutputStream.writeObject(product);
+			objectSaved = 1;
+			System.out.println("Saved : " + objectSaved);
+			return objectSaved;
+		}
+		catch (IOException exception) {
+			System.out.println(exception);
+			objectSaved = 0;
+			return objectSaved;
+		}
+	}
+
+	public int udpateProduct(Product product) {
+		// code here
+		int noOfRowsUpdated = 0;
+		return noOfRowsUpdated;
 	}
 }

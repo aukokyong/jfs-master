@@ -10,4 +10,5 @@ public interface ProductFileRepository {
 	public int insertProduct(Product product);
 	public abstract Product getProduct();
 	public abstract int insertArrayListToFile(List products);
+	public abstract ArrayList getArrayListFromFile();
 }
