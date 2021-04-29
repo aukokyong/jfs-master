@@ -7,7 +7,9 @@ public class EvenOddThreads {
 		evenThread.start();
 //		evenThread.stop();
 		OddThread oddThread = new OddThread();
-		oddThread.start();
+		evenThread.start();
+//		oddThread.start();
+		
 		try {
 			evenThread.join(1);
 			oddThread.join(1);

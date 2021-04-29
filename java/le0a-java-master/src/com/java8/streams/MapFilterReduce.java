@@ -3,12 +3,15 @@ package com.java8.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MapFilterReduce {
 	public static void main(String[] args) {
 //		oldStyleIteration();
-		mapping();
+//		mapping();
+//		filtering();
+		reduction();
 	}
 
 	public static void oldStyleIteration() {
@@ -60,5 +63,39 @@ public class MapFilterReduce {
 		for(String color : upperColorStrings) {
 			System.out.println(color);
 		}
+	}
+	public static void filtering() {
+//		mapping operation with streams
+		String[] colorStrings = new String[] {"red","green","blue","yellow"};
+//		Streams are sequence of elements 
+//		Support sequential and parallel operations
+//		Aggregate operations
+		Stream<String> colorStream = Arrays.stream(colorStrings);
+//		Map each element and modify them (using lambda expression [Function]) and return the modified value
+		Stream<String> filteredStream = colorStream.filter(color ->  color.length()>4);
+//		:: is method reference
+		String[] filteredColors = filteredStream.toArray(String[]::new);
+		for(String color : filteredColors) {
+			System.out.println(color);
+		}
+	}
+	public static void reduction() {
+//		mapping operation with streams
+		int[] ballCount = new int[] {5000,3000,2000,1000};
+		int sum = 0;
+		for(int i = 0; i<ballCount.length; i++) {
+			sum += ballCount[i];
+		}
+		System.out.println(sum);
+		
+//		IllegalStateException (?)
+        IntStream ballStream =  Arrays.stream(ballCount);
+        System.out.println(ballStream.sum());
+        ballStream =  Arrays.stream(ballCount);
+        System.out.println(ballStream.min());
+        ballStream =  Arrays.stream(ballCount);
+        System.out.println(ballStream.max());
+        ballStream =  Arrays.stream(ballCount);
+        System.out.println(ballStream.count());
 	}
 }
