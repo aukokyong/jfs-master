@@ -1,0 +1,12 @@
+com\domain\repository\ProductFileVectorRepositoryImpl.class
+com\domain\ui\CRUDApp.class
+com\domain\repository\ProductFileRepository.class
+com\domain\exception\ProductNotAvailableException.class
+com\domain\repository\util\MySQLConnectionUtil.class
+com\domain\service\LoggerService.class
+com\domain\repository\ProductRepositoryImpl.class
+com\domain\service\ProductService.class
+com\domain\service\ProductServiceImpl.class
+com\domain\repository\ProductFileRepositoryImpl.class
+com\domain\repository\ProductRepository.class
+com\domain\model\Product.class
