@@ -10,6 +10,7 @@ public class ProductServiceImpl implements ProductService {
 
 //   The ProductRepository dependency is injected by the IOC container into the constructor.
    public ProductServiceImpl(ProductRepository repository) {
+	   	  System.out.println("CONSTRUCTOR BASED DI ProductServiceImpl(ProductRepository repository)");
 	      this.repository = repository;
 	   }
 
