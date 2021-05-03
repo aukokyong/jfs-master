@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <!-- declaring property file -->
+    <context:property-placeholder location="classpath:product-service.properties"/>
+	<!-- define the spring beans -->
+	<!-- ProductRepository productRepository = new ProductRepositoryImpl(); -->
+	<bean id="productRepository"
+		class="com.domain.repository.ProductRepositoryImpl" />
+	<!-- <bean id="oracleProductRepository" class="com.domain.repository.OracleProductRepositoryImpl" 
+		/> -->
+<!-- 	<bean id="productService"
+		class="com.domain.service.ProductServiceImpl" scope="singleton"> -->
+			<bean id="productService"
+		class="com.domain.service.ProductServiceImpl" scope="prototype">
+		<!-- the dependency productRepository is injected using the constructor 
+			of the class ProductServiceImpl -->
+		<!-- index is optional -->
+		<!-- <constructor-arg index="0" ref="productRepository" /> -->
+		<!-- setProductRepository(ProductRepository productRepository)  -->
+		<property name="productRepository" ref="productRepository"/>
+		<property name="location" value="Singapore"/>
+		<property name="domainName" value="${domain.name}"/>
+	</bean>
+</beans>
