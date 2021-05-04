@@ -3,11 +3,9 @@ package com.domain.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import com.domain.model.Product;
 
-@Repository("productRepository")
+//@Repository("productRepository")
 //@Component("productRepository")
 public class ProductRepositoryImpl implements  ProductRepository{
     public List<Product> findAll() {
