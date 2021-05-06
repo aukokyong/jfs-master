@@ -4,3 +4,4 @@
 2. [java-lab2-mvn] Migrate [java-lab1] to maven.
 3. [uml-lab3] Create Activity Diagrams for the use cases.
 4. [java-lab4-mvn] Write JUnit test cases for testing the UI to allow selection of all [records<Actors>] , selection of unique records [id<ActorId>], insertion [Actor], updation [Actor], deletion [Actor] and searching [firstName]
+5. [sp-lab-jdbctemplate] - perform the crud operation for your module.
