@@ -229,7 +229,14 @@ FOREIGN KEY (AUTHOR_ID) REFERENCES AUTHOR(AUTHOR_ID) -- CHANGES HERE
 );
 -- SOLUTION
 CREATE TABLE TRAININGTEMP
-(
+(CREATE TABLE `products` (
+  `product_id` bigint NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `price` float NOT NULL,
+  `name_of_product` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 TRAININGID INT NOT NULL PRIMARY KEY,
 AUTHOR_ID VARCHAR(15),
 FOREIGN KEY (AUTHOR_ID) REFERENCES AUTHOR(AUTHOR_ID) ON DELETE CASCADE-- CHANGES HERE
@@ -242,5 +249,6 @@ DROP TABLE TRAININGTEMP;
 -- USE AUTHORTEMP AND TRAININGTEMP
 
 
-
-
+select * from products;
+insert into products values (1, 'A must read', 50, "Man's search for meaning");
+insert into products values (2, 'Autobiography', 50, "Elon Musk");

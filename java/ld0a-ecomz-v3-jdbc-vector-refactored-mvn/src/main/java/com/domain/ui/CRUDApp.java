@@ -12,8 +12,6 @@ import com.domain.service.ProductService;
 import com.domain.service.ProductServiceImpl;
 
 public class CRUDApp {
-
-
 	private static void getProductFromFile() {
 		ProductFileRepository productFileRepository = new ProductFileRepositoryImpl();
 		Product product = productFileRepository.getProduct();

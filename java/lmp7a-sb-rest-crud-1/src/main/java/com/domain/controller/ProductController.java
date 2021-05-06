@@ -46,6 +46,7 @@ public class ProductController {
 	      Product productReturned = productRepository.save(product);
 	      Colors.pc("Inserted " + product);
 		return productReturned;
+//		return "hello";
 	}
 	   //@RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
 	@PutMapping("/products/{id}")
