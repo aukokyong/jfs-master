@@ -20,6 +20,7 @@ public class App implements CommandLineRunner{
 	private ProductJDBCRepository productJDBCRepository;
 	
 	public static void main(String[] args) {
+//		SYSOUT 1. MOD1, 2. MOD2 1.....
 		System.out.println("MAIN BEGIN ");
 		SpringApplication.run(App.class, args);
 		System.out.println("MAIN END");
